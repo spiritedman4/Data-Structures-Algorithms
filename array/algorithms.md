@@ -14,3 +14,11 @@ For every outer loop, it will omit the last element because already it will be t
 | Space | O(1) | sorts in place, no extra structures |
 
 
+**Two Pointer**
+
+Two Pointer is nothing but using two variables in array to reverse it. Like start and stop variable.
+we validate the start and stop in the loop until the two variables becomes same.
+
+
+
+

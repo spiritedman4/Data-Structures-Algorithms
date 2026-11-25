@@ -27,7 +27,12 @@ def sub_arr_sum_equals_k(nums,k):
 for test_case in test_cases:
     sub_arr_sum_equals_k(nums=test_case[0],k=test_case[1])
 
+'''
+Below is the optimized solution using O(n) tc and o(1) sc.
 
+
+
+'''
 def sub_arr_equals_k_opt(nums,k):
 
     prefix_map = {0:1}
@@ -36,14 +41,16 @@ def sub_arr_equals_k_opt(nums,k):
 
     for num in nums:
         prefix_sum += num
-        previous_prefix = prefix_sum - k
+        prev_prefix = prefix_sum - k
 
-        if previous_prefix in prefix_map:
-           count += prefix_map[prefix_sum]
+        if prev_prefix in prefix_map:
+            count += prefix_map[prev_prefix]
 
-        prefix_map[previous_prefix] = prefix_map.get(previous_prefix,0) + 1
-    print(prefix_map)
+        prefix_map[prefix_sum] = prefix_map.get(prefix_sum,0) + 1
     return count
+        
+
+
 
 
 

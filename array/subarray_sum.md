@@ -23,6 +23,11 @@ For e.g:
 
     prefixsum(1-1) = prefixSum(j) - k
 
+    prev_prefix = current_prefix - k
+
+    we have k and current prefix, if we sub them and we get a value and that value if present in the hash map, it is a prefix sum.
+    So we have a sub array equals k
+
 **
 
 
